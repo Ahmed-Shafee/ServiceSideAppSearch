@@ -7,7 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Serve HTTP Requests
+    - name: Set up Python
       run: |
-        npm install -g serve
-        serve -l $PORT
+        python3 -m venv venv
+        . venv/bin/activate
+        pip install -r requirements.txt
+    - name: Start HTTP Server
+      run: python server.py
