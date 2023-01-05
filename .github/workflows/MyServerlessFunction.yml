@@ -1,9 +1,7 @@
 name: HTTP Server
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  http_event:
+    path: /webhook
 jobs:
   build:
     runs-on: ubuntu-latest
