@@ -1,1 +1,1 @@
-This web server for system to analyes files
+This web server (Apache Http) for system to analyes files.
